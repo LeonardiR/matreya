@@ -2,14 +2,14 @@
 
 
 /* Font main brand */
-
 $brand-primary-font: 'lato', helvetica, arial;
 
 /* Main Colors */
-
 $brand-primary-color: #be1e2d;
+$brand-primary-color__black: #212121;
 
-/* Call to action styles */
+
+/* Call to action */
 
 .c-btn{
   white-space: nowrap;
@@ -38,7 +38,33 @@ $brand-primary-color: #be1e2d;
 
 }
 
-/* -------- */
+/* Headings */
+
+.p-heading{
+  color: $brand-primary-color;
+
+  &.p-heading__centered{
+    text-align: center;
+  }
+
+  &.p-heading__s1{
+    font-size: 50px;
+  }
+
+  &.p-heading__s4{
+    font-size: 18px;
+  }
+}
+
+/* -------- General Styles ---------- */
+
+body{
+  font-family: $brand-primary-font;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: $brand-primary-color__black;
+}
 
 
 .coll-single{
