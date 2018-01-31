@@ -10,9 +10,9 @@ $brand-primary-color__black: #212121;
 $brand-primary-color__blue: #324456;
 
 
-/* Call to action btn */
+/* Call to action &  btn */
 
-.c-btn{
+.c-cta{
   white-space: nowrap;
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.25);
@@ -39,6 +39,33 @@ $brand-primary-color__blue: #324456;
 
 }
 
+.c-btn{
+  font-size: 12px;
+  font-weight: 900;
+  color: $brand-primary-color;
+  padding: 16px 35px 16px 35px;
+  box-shadow: none;
+  border: 2px solid $brand-primary-color;
+  background-color: transparent;
+}
+
+
+/* Inputs */
+
+.p-input{
+  margin: 0 !important;
+  width: 100%;
+  padding: 25px 25px !important;
+  background-color: white;
+  border-color: darkgrey;
+
+  &.p-input--secondary{
+    background-color: $brand-primary-color__blue;
+    border-color: $brand-primary-color__blue;
+    color: white;
+  }
+}
+
 /* Headings */
 
 .p-heading{
@@ -52,6 +79,10 @@ $brand-primary-color__blue: #324456;
     color: white;
   }
 
+  &.p-heading__third-color{
+    color: lightgrey;
+  }
+
   &.p-heading__s1{
      font-size: 50px;
    }
@@ -60,6 +91,9 @@ $brand-primary-color__blue: #324456;
     font-size: 32px;
   }
 
+  &.p-heading__s3{
+    font-size: 28px;
+  }
   &.p-heading__s4{
     font-size: 18px;
   }
@@ -90,6 +124,26 @@ $brand-primary-color__blue: #324456;
         align-items: center;
         align-content: center;
         flex-flow: row wrap;
+
+        .fl-col{
+          width: 50% !important;
+
+          @media (max-width: 768px){
+            clear: both;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto !important;
+          }
+
+          &:last-child{
+            width: 49% !important;
+
+            @media (max-width: 768px){
+              width: auto !important;
+            }
+          }
+        }
       }
     }
   }
@@ -158,9 +212,7 @@ $brand-primary-color__blue: #324456;
 
           label{
             width: 100%;
-            font-size: 28px;
             letter-spacing: 0.15em;
-            color: lightgrey;
             margin: 0 0 10px 0;
 
             @media (min-width: 1024px){
@@ -170,26 +222,10 @@ $brand-primary-color__blue: #324456;
           }
 
           input[type="email"]{
-            margin: 0;
-            width: 100%;
-            background-color: $brand-primary-color__blue;
-            border-color: $brand-primary-color__blue;
-            color: white;
-            padding: 25px 25px;
 
             @media (min-width: 1024px){
               width: 480px;
             }
-          }
-
-          input[type="submit"]{
-            font-size: 12px;
-            font-weight: 900;
-            color: $brand-primary-color;
-            padding: 16px 35px 16px 35px;
-            box-shadow: none;
-            border: 2px solid $brand-primary-color;
-            background-color: transparent;
           }
         }
       }
