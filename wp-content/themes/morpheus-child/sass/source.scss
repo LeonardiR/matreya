@@ -8,9 +8,11 @@ $brand-primary-font: 'lato', helvetica, arial;
 $brand-primary-color: #be1e2d;
 $brand-primary-color__black: #212121;
 $brand-primary-color__blue: #324456;
+$brand-primary-color__darkgrey: #333333;
 
 
-/* Call to action &  btn */
+
+/* COMPONENST */
 
 .c-cta{
   white-space: nowrap;
@@ -49,6 +51,39 @@ $brand-primary-color__blue: #324456;
   background-color: transparent;
 }
 
+.c-contact-form{
+
+  input[type="text"],
+  input[type="email"]{
+    margin: 0 !important;
+    height: auto !important;
+    width: 100%;
+    padding: 16px 25px !important;
+    background-color: white !important;
+    border-color: lightgrey !important;
+  }
+
+  textarea{
+    margin: 0 !important;
+    height: auto !important;
+    width: 100%;
+    background-color: white !important;
+    border-color: lightgrey !important;
+  }
+
+  input[type="submit"]{
+    font-size: 12px;
+    font-weight: 900;
+    color: $brand-primary-color;
+    padding: 16px 35px 16px 35px;
+    box-shadow: none;
+    border: 2px solid $brand-primary-color;
+    background-color: transparent;
+  }
+}
+
+
+/* PATTERNS */
 
 /* Inputs */
 
@@ -57,7 +92,7 @@ $brand-primary-color__blue: #324456;
   width: 100%;
   padding: 25px 25px !important;
   background-color: white;
-  border-color: darkgrey;
+  border-color: lightgrey;
 
   &.p-input--secondary{
     background-color: $brand-primary-color__blue;
@@ -233,6 +268,27 @@ $brand-primary-color__blue: #324456;
   }
 }
 
+.c-team{
+
+  .dvteamgrid{
+    height: auto !important;
+    text-align: center;
+
+    li {
+      float: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      opacity: 1;
+      list-style: none !important;
+      width: 49% !important;
+      display: inline-block;
+      position: relative !important;
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
+}
+
 
 /* -------- General Styles ---------- */
 
@@ -244,8 +300,11 @@ body{
   color: $brand-primary-color__black;
 }
 
-
 .coll-single{
+
+  .copy-container{
+    margin:0;
+  }
 
   .title-container{
     display: none;
@@ -258,4 +317,47 @@ body{
 
 .columns{
   padding: 0;
+}
+
+.site-footer{
+  position: relative;
+  width: 100%;
+  z-index: 99;
+  overflow: hidden;
+  height: auto;
+  display: block;
+  bottom: 0;
+
+  .footer-container{
+    padding: 0;
+
+    .bottom{
+      border:none;
+      margin:0;
+      text-align: center;
+      padding: 24px;
+
+      .social{
+        font-size: 48px;
+        color: white;
+        margin-bottom: 7px;
+
+        a{
+
+          &:hover{
+            color: lightgrey;
+
+          }
+
+          &:before{
+            display: none;
+          }
+        }
+      }
+
+      .text{
+        float: none;
+      }
+    }
+  }
 }
