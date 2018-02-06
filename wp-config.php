@@ -78,7 +78,6 @@ $table_prefix  = 'wp_dy2q16xvnm_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
-//define( 'WP_CACHE', false );
 require_once( dirname( __FILE__ ) . '/gd-config.php' );
 define( 'FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', (0705 & ~ umask()));

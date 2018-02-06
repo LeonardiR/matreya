@@ -1,3 +1,15 @@
+/*
+ Theme Name:   Morpheus Child
+ Description:  Morpheus Child Theme
+ Author:       Hector Garcia
+ Template:     morpheus
+ Version:      1.1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  morpheus-child
+*/
+
+
 /* Main Child Styles theme */
 
 
@@ -82,6 +94,92 @@ $brand-primary-color__darkgrey: #333333;
   }
 }
 
+.c-team{
+
+  &.coll-shortcode-team{
+    text-align: center;
+    margin: 0 !important;
+
+    .hentry {
+       text-align: center;
+       margin-bottom: 1.5rem;
+       display: inline-block;
+       vertical-align: top;
+       float: none !important;
+       height: auto !important;
+       width: 49%;
+
+      @media only screen and (min-width: 40.063em){
+        width:25%;
+      }
+
+      @media only screen and (min-width: 64.063em){
+        width: 19.33333%;
+      }
+
+      .content{
+        margin: 0 auto;
+        color: $brand-primary-color;
+
+        p{
+          margin-bottom: 5px;
+          line-height: 20px;
+
+          a{
+            margin-right: 10px;
+
+            &:hover, &:focus{
+              color: lightgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-team-sidebar{
+
+  margin: 24px 0 0 40px;
+
+  .team-list{
+    list-style: none;
+    margin-left: 0;
+
+    a{
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+
+.c-team-banner{
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media only screen and (min-width: 600px){
+    height:600px;
+
+  }
+
+  .c-team-banner__content{
+    position: relative;
+    top: 65%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 250px 22px 50px;
+
+    @media only screen and (min-width: 600px){
+      padding: 20px;
+    }
+  }
+}
+
 
 /* PATTERNS */
 
@@ -119,11 +217,16 @@ $brand-primary-color__darkgrey: #333333;
   }
 
   &.p-heading__s1{
-     font-size: 50px;
-   }
+    font-size: 40px;
+
+    @media (min-width: 600px){
+      font-size: 50px
+    }
+  }
 
   &.p-heading__s2{
     font-size: 32px;
+    word-wrap: break-word;
   }
 
   &.p-heading__s3{
@@ -141,7 +244,7 @@ $brand-primary-color__darkgrey: #333333;
   margin: 0 auto;
 }
 
-/* Sections */
+/* SECTIONS */
 
 .s-about{
   background-color: rgba(10,0,0, 0.14);
@@ -268,23 +371,39 @@ $brand-primary-color__darkgrey: #333333;
   }
 }
 
-.c-team{
+.s-team-page{
 
-  .dvteamgrid{
-    height: auto !important;
-    text-align: center;
+  .ls-fullsize{
+    height: 600.812px !important;
+  }
 
-    li {
-      float: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      opacity: 1;
-      list-style: none !important;
-      width: 49% !important;
-      display: inline-block;
-      position: relative !important;
-      left: 0 !important;
-      top: 0 !important;
+  p{
+    font-size: 1.2rem;
+  }
+  
+  .bio-img{
+    float: left;
+
+    @media only screen and (max-width:768px){
+      float: none;
+
+      .fl-photo-content{
+        text-align: center;
+      }
+    }
+  }
+
+  .fl-col-small{
+
+    @media only screen and (max-width:768px){
+      max-width: 100% !important;
+
+      .team{
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        padding: 6px;
+      }
     }
   }
 }
@@ -293,30 +412,50 @@ $brand-primary-color__darkgrey: #333333;
 /* -------- General Styles ---------- */
 
 body{
-  font-family: $brand-primary-font;
+  font-family: $brand-primary-font !important;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.04em;
   color: $brand-primary-color__black;
 }
 
-.coll-single{
+h1, h2, h3, h4, h5, h6{
+  font-family: $brand-primary-font !important;
+}
+
+.ps-scrollbar-y{
+  background-color: $brand-primary-color !important;
+
+  &:hover{
+    border-color: $brand-primary-color !important;
+  }
+}
+
+.common{
 
   .copy-container{
     margin:0;
   }
 
-  .title-container{
+  .content-container{
     display: none;
+  }
+
+  .title-container{
+    padding: 0 !important;
+
+    .title-text{
+      display: none;
+    }
   }
 }
 
 .row{
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .columns{
-  padding: 0;
+  padding: 0 !important;
 }
 
 .site-footer{
