@@ -98,6 +98,7 @@ global $coll_is_mobile;
         } else {
             wp_enqueue_script( 'custom.structure' );
         }
+
     wp_enqueue_script( 'theme_js', get_stylesheet_directory_uri() . '/js/custom.structure.s.js', array( 'jquery' ), '1.1', true );
     wp_enqueue_script( 'theme_js_menu', get_stylesheet_directory_uri() . '/js/menuState.js', array( 'jquery' ), '1.2', true );
     }

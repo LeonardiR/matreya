@@ -19,7 +19,5 @@
            menuState.menuSelected(menuState.elements.menu, menuState.elements.menuItem);
        }
    };
-
     menuState.init();
-
 }(jQuery));
